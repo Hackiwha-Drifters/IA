@@ -1,6 +1,8 @@
 ## Machine Learning Models
 
-In this section, we have implemented two prediction modules: one for predicting if the heart is diseased based on input data (analyses), and another for segmentation (these are initial models).
+In this section, we have implemented two prediction modules: 
+- one for predicting if the heart is diseased based on input data (analyses),
+- another for segmentation (these are initial models).
 
 ## Flask
 
