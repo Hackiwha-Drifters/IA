@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification and Segmentation</title>
+</head>
+<body>
+    <h1>Image Classification and Segmentation</h1>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if image_path %}
+        <h2>Original Image</h2>
+        <img src="{{ image_path }}" alt="Uploaded Image" style="max-width: 400px; max-height: 400px;">
+        
+        <h2>Classification Results</h2>
+        <p>Predicted Class : {{ predicted_class }}</p>
+        <p>Confidence: {{ confidence }}</p>
+        
+        {% if segmented_image_path %}
+            <h2>Segmented Image</h2>
+            <img src="{{ segmented_image_path }}" alt="Segmented Image" style="max-width: 400px; max-height: 400px;">
+        {% endif %}
+        <a href="/another_page"><button>Go to Another Page</button></a>
+    {% endif %}
+</body>
+</html>
